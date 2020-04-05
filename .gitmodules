@@ -1,6 +1,6 @@
 [submodule "googletest"]
 	path = vendor/googletest
-	url = ../googletest.git
+        url = git@github.com:jamieiles/googletest.git
 [submodule "vendor/altera-jtag"]
 	path = vendor/altera-jtag
-	url = ../jtag.git
+	url = git@github.com:jamieiles/jtag.git

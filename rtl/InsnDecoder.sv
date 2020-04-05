@@ -129,15 +129,18 @@ endtask
 always_ff @(posedge clk or posedge reset) begin
     if (reset) begin
         complete <= 1'b0;
-        instruction <= Instruction'(1'b0);
+//        instruction <= Instruction'(1'b0);
+        instruction.invalid <= 1'b0;
         immed_start <= 1'b0;
     end else if (flush) begin
         complete <= 1'b0;
-        instruction <= Instruction'(1'b0);
+        instruction.invalid <= 1'b0;
+//        instruction <= Instruction'(1'b0);
         immed_start <= 1'b0;
     end else begin
         if (complete && !stall) begin
-            instruction <= Instruction'(1'b0);
+            instruction.invalid <= 1'b0;
+//            instruction <= Instruction'(1'b0);
             complete <= 1'b0;
         end
 

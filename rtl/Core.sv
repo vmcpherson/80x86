@@ -414,7 +414,8 @@ LoadStore       LoadStore(.clk(clk),
 
 PosedgeToPulse PosedgeToPulse(.d(nmi),
                               .q(nmi_pulse),
-                              .*);
+                              .clk(clk),
+                              .reset(reset));
 
 Microcode       Microcode(.clk(clk),
                           .reset(reset),
